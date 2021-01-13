@@ -1,33 +1,39 @@
-
+* { 
+  box-sizing:border-box;
+  color: white;
+  font-family: sans-serif;
+}
 
 body {
-
-
   background-image: url("abstract-1278044_1920.jpg");
-  font-family: sans-serif;
-  color: white; }
-
-
-
-.divblock1 {
-
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 900px;
-
-
+  height: 500px;
 }
 
-.divblock1 > div {
-  width: 400px;
-  height: 290px;
+.divblock {
   text-align: center;
+  background: rgb(69,69,69);
   background: rgba(69, 69, 69, 0.5);
   border-radius: 15px;
 }
 
+label {
+	float: left;
+	width: 30%;
+}
 
-.tab {
-  padding-left: 23px;
+input {
+  color: black;
+}
+
+.Eingabe {
+  float: left;
+	width: 50%;
+}
+
+.divblock * {
+  margin: 10px 15px;
 }
