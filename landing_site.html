@@ -3,7 +3,7 @@
     Müsst folgende elemnte mit eueren eigenen Pfaden austauchen
     Zeile 12: stylesheet
     Zeile 59: window.open('Pfad von dieser HTML seite einfügen');
-    Zeile 71: window.open('Pfad von Startseite einfügen -> Startseite.html')
+    Zeile 73: window.open('Pfad von Startseite einfügen -> Startseite.html')
 
 
   -->
@@ -61,13 +61,15 @@
             }
 
 
-
-
             function reload(){
               if( vorname.value == "" || nachname.value == ""  || geburtsdatum.value == "" || !(tickbox.checked) )
               {        neuladen();         }
               else if(!(vorname.value == "" || nachname.value == ""  || geburtsdatum.value == "" || !(tickbox.checked)))
               {
+
+                  alert('Sehr geehrter herr ' + nachname.value + '. \nBestätigen Sie mit OK um weitergeleitet werden.');
+
+
                     window.open('https://www.youtube.com/watch?v=1sruEnQ9HkU&list=WL&index=3&ab_channel=eliktroniq');
                     window.close( );
               }
@@ -132,3 +134,4 @@
 
 </body>
 </html>
+
