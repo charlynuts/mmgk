@@ -1,137 +1,78 @@
 <!DOCTYPE html>
-<!-- UM diese Html Seite zu laufen zu bringen
-    Müsst folgende elemnte mit eueren eigenen Pfaden austauchen
-    Zeile 12: stylesheet
-    Zeile 59: window.open('Pfad von dieser HTML seite einfügen');
-    Zeile 73: window.open('Pfad von Startseite einfügen -> Startseite.html')
+<html lang="de" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style_landing.css">
+    <script>
+      var vorname, nachname, geburtsdatum;
 
-
-  -->
-<html>
-<head> <meta charset="utf-8">
-  <link rel="stylesheet" href="style_landing.css">
-
-  <script>
-
-    var vorname, nachname, geburtsdatum, tickbox;
-
-
-
-    function init(){
-    vorname = document.getElementsByName("vorname")[0];
-    nachname = document.getElementsByName("nachname")[0];
-    geburtsdatum = document.getElementsByName("geburtsdatum")[0];
-    tickbox = document.getElementsByName("tickbox")[0];
-    vorname.focus(); //Eingabecursor in Summandenfeld platzieren
-    }
-
-
-    function vname(){
-      if ( vorname.value == "" ){
-        alert('Das Eingabefeld Vorname wurde nicht ausgefüllt !');
-
-
+      function init(){
+        vorname = document.getElementsByName("vorname")[0];
+        nachname = document.getElementsByName("nachname")[0];
+        geburtsdatum = document.getElementsByName("geburtsdatum")[0];
+        vorname.focus(); //Eingabecursor in Summandenfeld platzieren
       }
 
+      function vname(){
+        if ( vorname.value == "" ){
+          alert('Das Eingabefeld Vorname wurde nicht ausgefüllt!');
+        }
       }
 
       function nname(){
         if ( nachname.value == "" ){
-          alert('Das Eingabefeld Nachname wurde nicht ausgefüllt !');
+          alert('Das Eingabefeld Nachname wurde nicht ausgefüllt!');
+        }
+      }
 
-        }}
+      function GB(){
+        if (geburtsdatum.value == ""){
+          alert('Das Eingabefeld Geburtstag wurde nicht ausgefüllt!');
+        }
+      }
 
+      function neuladen() {
+        window.open('landing_site.html');
+        window.close( );
+      }
 
-        function GB(){
-          if (geburtsdatum.value == ""){
-            alert('Das Eingabefeld Geburtstag wurde nicht ausgefüllt !');
+      function reload(){
+        if( vorname.value == "" || nachname.value == ""  || geburtsdatum.value == ""){
+          neuladen();
+        }
+        else if(!(vorname.value == "" || nachname.value == ""  || geburtsdatum.value == "")){
+          alert('Sehr geehrte/r Frau/Herr ' + nachname.value + '. \nBitte bestätigen Sie mit OK um weitergeleitet werden.');
+          window.open('Startseite.html');
+          window.close( );
+        }
+      }
 
-          }}
+      function abschicken(){
+        vname();
+        nname();
+        GB();
+        reload();
+      }
 
-          function Tbox(){
-            if ( !(tickbox.checked) ){
-              alert(' Sie müssen das Feld "Meine Angaben sind wahrheitsgetreu" bestätigen um fortzufahren ! ');
+      window.addEventListener('DOMContentLoaded',init);
 
-            }}
+    </script>
+  </head>
+  <body>
+    <div class="divblock">
+      <h1>Online Authentifizierung</h1>
+      <form>
+        <label for="fname">Vorname</label>
+        <input class="Eingabe" type="text" id="fname" name="vorname"><br>
 
+        <label for="lname">Nachname</label>
+        <input class="Eingabe" type="text" id="lname" name="nachname"><br>
 
-            function neuladen() {
-              window.open('/Users/charlie/Documents/Studium/medieninformatik/semester1/multimedia_grundkurs/uebungen/landing_page/landing_site.html');
-              window.close( );
-            }
+        <label>Geburtsdatum</label>
+        <input class="Eingabe" type="date" id="gebdat" name="geburtsdatum"><br>
 
-
-            function reload(){
-              if( vorname.value == "" || nachname.value == ""  || geburtsdatum.value == "" || !(tickbox.checked) )
-              {        neuladen();         }
-              else if(!(vorname.value == "" || nachname.value == ""  || geburtsdatum.value == "" || !(tickbox.checked)))
-              {
-
-                  alert('Sehr geehrter herr ' + nachname.value + '. \nBestätigen Sie mit OK um weitergeleitet werden.');
-
-
-                    window.open('https://www.youtube.com/watch?v=1sruEnQ9HkU&list=WL&index=3&ab_channel=eliktroniq');
-                    window.close( );
-              }
-              }
-
-
-
-            function abschicken(){
-
-            vname();
-            nname();
-            GB();
-            Tbox();
-            reload();
-
-
-
-            }
-
-
-
-
-
-
-
-
-
-
-
-  window.addEventListener('DOMContentLoaded',init);
-
-
-      </script>
-
-
-
-
-
-
-</head>
-<body >
-
-<div class="divblock1">
-  <div class="divblock2">
-
-  <h1>Online Authentifizierung</h1>
-<form>
-    <label for="fname">Vorname  ⠀<span class="tab"> :</label>
-      <input type="text" id="fname" name="vorname"><br><br>
-  <label for="lname">Nachname <span class="tab"> :</label>
-  <input type="text" id="lname" name="nachname"><br><br>
-    <label>Geburtsdatum  :</label>
-    <input type="date" id="gebdat" name="geburtsdatum"><br><br>
-  <label for="mc">Meine Angaben sind wahrheitsgetreu : </label>
-  <input type="checkbox"  name="tickbox" value="1"><br><br>
-<input type="button" value="abschicken" onclick="abschicken();" ><br>
-</form>
-
-  </div>
-
-</div>
-
-</body>
+        <input class="Abschicken" type="button" value="abschicken" onclick="abschicken();">
+      </form>
+    </div>
+  </body>
 </html>
-
