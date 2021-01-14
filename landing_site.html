@@ -2,6 +2,7 @@
 <html lang="de" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <title>Authentifizierung im WWW</title>
     <link rel="stylesheet" href="style_landing.css">
     <script>
       var vorname, nachname, geburtsdatum;
@@ -59,20 +60,19 @@
     </script>
   </head>
   <body>
-    <div class="divblock">
+    <form>
       <h1>Online Authentifizierung</h1>
-      <form>
-        <label for="fname">Vorname</label>
-        <input class="Eingabe" type="text" id="fname" name="vorname"><br>
 
-        <label for="lname">Nachname</label>
-        <input class="Eingabe" type="text" id="lname" name="nachname"><br>
+      <label for="fname">Vorname</label>
+      <input class="Eingabe" type="text" id="fname" name="vorname"><br>
 
-        <label>Geburtsdatum</label>
-        <input class="Eingabe" type="date" id="gebdat" name="geburtsdatum"><br>
+      <label for="lname">Nachname</label>
+      <input class="Eingabe" type="text" id="lname" name="nachname"><br>
 
-        <input class="Abschicken" type="button" value="abschicken" onclick="abschicken();">
-      </form>
-    </div>
+      <label>Geburtsdatum</label>
+      <input class="Eingabe" type="date" id="gebdat" name="geburtsdatum"><br>
+
+      <input class="Abschicken" type="button" value="abschicken" onclick="abschicken();">
+    </form>
   </body>
 </html>
