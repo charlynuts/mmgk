@@ -1,4 +1,5 @@
-* { box-sizing:border-box;
+* { 
+  box-sizing:border-box;
   color: white;
   font-family: sans-serif;
 }
@@ -20,8 +21,9 @@ body > * {                /*Kopf, Mittelteil, Fuß*/
 header {                  /*Kopfzeile*/
   display: flex;
   align-items: center;
-  background: rgb(69,69,69);
-  background: rgba(69, 69, 69, 0.5);
+  background: rgb(74, 112, 139);
+  background: rgba(74, 112, 139, 0.5);
+  border-radius: 5px;
 }
 
 .Mittelteil {           /*Mittelteil*/
@@ -30,8 +32,9 @@ header {                  /*Kopfzeile*/
 }
 
 .Mittelteil > * {       /*Inhalt im Mittelteil (Navigation und Inhalt)*/
-  background: rgb(69,69,69);
-  background: rgba(69, 69, 69, 0.5);
+  background: rgb(74, 112, 139);
+  background: rgba(74, 112, 139, 0.5);
+  border-radius: 5px;
 }
 
 nav {                 /*Navigationsbereich*/
@@ -64,6 +67,7 @@ footer {            /*Fußzeile*/
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background: rgb(69,69,69);
-  background: rgba(69, 69, 69, 0.5);
+  background: rgb(74, 112, 139);
+  background: rgba(74, 112, 139, 0.5);
+  border-radius: 5px;
 }
