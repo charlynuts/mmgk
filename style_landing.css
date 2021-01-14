@@ -1,4 +1,4 @@
-* { 
+* {
   box-sizing:border-box;
   color: white;
   font-family: sans-serif;
@@ -10,13 +10,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 500px;
+  height: 95vh;
 }
 
-.divblock {
+form {
   text-align: center;
-  background: rgb(69,69,69);
-  background: rgba(69, 69, 69, 0.5);
+  padding: 10px;
+  background: rgb(74, 112, 139);
+  background: rgba(74, 112, 139, 0.5);
   border-radius: 15px;
 }
 
@@ -34,6 +35,6 @@ input {
 	width: 50%;
 }
 
-.divblock * {
+form * {
   margin: 10px 15px;
 }
