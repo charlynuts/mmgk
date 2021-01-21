@@ -1,4 +1,4 @@
-* { 
+* {
   box-sizing:border-box;
   color: white;
   font-family: sans-serif;
@@ -37,25 +37,10 @@ header {                  /*Kopfzeile*/
   border-radius: 5px;
 }
 
-nav {                 /*Navigationsbereich*/
-  flex: 1 1 10%;
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin-right: 20px;
-}
-
-nav > * {           /*Inhalt im Navigationsbereich*/
-  margin: 10px;
-  /*display: flex;
-  justify-content: center;
-  align-items: center;*/
-}
 
 .Inhalt {           /*Inhaltsbereich*/
   min-width: 200px;
+  min height: 70vh;
   flex: 1 1 71%;
 }
 
@@ -63,11 +48,119 @@ nav > * {           /*Inhalt im Navigationsbereich*/
   margin: 15px;
 }
 
-footer {            /*Fußzeile*/
+.footer {            /*Fußzeile*/
+
+    display: flex;
+    flex-wrap: wrap;
+    background: rgb(74, 112, 139);
+    background: rgba(74, 112, 139, 0.5);
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+
+
+    /*
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+     */
+
+
+
+}
+.nav_tabelle {
+  width: 32%;
+
+
+}
+.nav_tabelle > ul {
+
+  list-style: none;
+	margin: 0;
+	padding: 0;
+  text-align: center;
+
+
+}
+
+.nav_tabelle > li {
+display: inline;
+
+
+}
+
+
+.nav_tabelle a {
+   float: left;
+  display: block;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+nav {                 /*Navigationsbereich*/
+  flex: 1 1 5%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  background: rgb(74, 112, 139);
-  background: rgba(74, 112, 139, 0.5);
-  border-radius: 5px;
+ align-items: flex-start;
+
 }
+
+
+
+
+
+
+
+nav > ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+nav li {
+	margin: 0.5em;
+	padding: 0;
+	font-size: 1.5rem;
+	flex: 1 1 0%;
+  list-style-type: none;
+}
+
+nav a {
+	display: block;
+	padding: 0.4em;
+	text-decoration: none;
+	font-weight: bold;
+	text-align: center;
+	border: 1px solid black;
+	border-radius: 5px;
+	box-shadow: 0 5px 10px white inset;
+	color: white;
+	background-color: rgba(74, 112, 139, 0.5);
+
+}
+
+nav .untermenu {
+	visibility: hidden; 
+	height: 0; 
+	z-index: 1000;
+}
+
+nav .untermenu li {
+	display: block;
+	/* width: 15em; */
+}
+
+ nav li:hover .untermenu,
+nav li:active .untermenu,
+nav li:focus .untermenu {
+	visibility: visible;
+	height: auto;
+}
+
+
+a:hover {
+  background: #f1f1f1;
+  color: black;}
