@@ -73,6 +73,10 @@ nav {                 /*Navigationsbereich*/
   top: 0;
 }
 
+.Link {
+  flex: 1 1 50%;
+}
+
 .Link * {
 	margin: 10px;
   list-style: none;
