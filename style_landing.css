@@ -26,11 +26,11 @@ label {
 	width: 30%;
 }
 
-input, button {
+input {
   color: black;
 }
 
-input {
+.Eingabe {
   float: left;
 	width: 50%;
 }
