@@ -4,76 +4,47 @@
     <meta charset="utf-8">
     <title>Authentifizierung im WWW</title>
     <link rel="stylesheet" href="style_landing.css">
-    <link rel="icon" type="image/svg+xml" href="finger-2819098.svg" sizes="any">
-    <script>
-      var vorname, nachname, geburtsdatum;
+	  <link rel="icon" type="image/svg+xml" href="finger-2819098.svg" sizes="any">
+  </head>
+  <body>
+    <form id="Formular">
+      <h1>Online Authentifizierung</h1>
 
-      function init(){
-        vorname = document.getElementsByName("vorname")[0];
-        nachname = document.getElementsByName("nachname")[0];
-        geburtsdatum = document.getElementsByName("geburtsdatum")[0];
-        vorname.focus(); //Eingabecursor in Summandenfeld platzieren
+      <label for="nachname">Nachname</label>
+      <input type="text" name="nachname" required><br>
+
+      <label for="Passwort">Passwort</label>
+      <input type="password" name="Passwort" required><br>
+
+      <button type="submit">anmelden</button>
+    </form>
+  </body>
+  <script>
+    var Nachname, Passwort, elem;
+
+    function init(){
+        Nachname = document.getElementsByName("Nachname")[0];
+        Passwort = document.getElementsByName("Passwort")[0];
+        Nachname.focus(); //Eingabecursor in Summandenfeld platzieren
       }
 
-      function vname(){
-        if ( vorname.value == "" ){
-          alert('Das Eingabefeld Vorname wurde nicht ausgefüllt!');
-        }
-      }
+    elem = document.getElementById("Formular");
+    elem.addEventListener("submit", Bestätigen);
 
-      function nname(){
-        if ( nachname.value == "" ){
-          alert('Das Eingabefeld Nachname wurde nicht ausgefüllt!');
-        }
+    function Bestätigen()
+    {
+      if (Passwort.value == "13Punkte")
+      {
+        window.open('Startseite.html');
+        window.close( );
       }
-
-      function GB(){
-        if (geburtsdatum.value == ""){
-          alert('Das Eingabefeld Geburtstag wurde nicht ausgefüllt!');
-        }
-      }
-
-      function neuladen() {
+      else {
+        alert("Das Passwort ist leider falsch. Bitte versuchen Sie es erneut!");
         window.open('landing_site.html');
         window.close( );
       }
+    }
 
-      function reload(){
-        if( vorname.value == "" || nachname.value == ""  || geburtsdatum.value == ""){
-          neuladen();
-        }
-        else if(!(vorname.value == "" || nachname.value == ""  || geburtsdatum.value == "")){
-          alert('Sehr geehrte/r Frau/Herr ' + nachname.value + '. \nBitte bestätigen Sie mit OK um weitergeleitet werden.');
-          window.open('Startseite.html');
-          window.close( );
-        }
-      }
-
-      function abschicken(){
-        vname();
-        nname();
-        GB();
-        reload();
-      }
-
-      window.addEventListener('DOMContentLoaded',init);
-
-    </script>
-  </head>
-  <body>
-    <form>
-      <h1>Online Authentifizierung</h1>
-
-      <label for="fname">Vorname</label>
-      <input class="Eingabe" type="text" id="fname" name="vorname"><br>
-
-      <label for="lname">Nachname</label>
-      <input class="Eingabe" type="text" id="lname" name="nachname"><br>
-
-      <label>Geburtsdatum</label>
-      <input class="Eingabe" type="date" id="gebdat" name="geburtsdatum"><br>
-
-      <input class="Abschicken" type="button" value="abschicken" onclick="abschicken();">
-    </form>
-  </body>
+    window.addEventListener('DOMContentLoaded',init);
+  </script>
 </html>
