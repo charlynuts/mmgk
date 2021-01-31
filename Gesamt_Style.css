@@ -1,20 +1,15 @@
 * {
   box-sizing:border-box;
-  color: white;
+  color: black;
   font-family: sans-serif;
 }
 
-body {                    /*body*/
-  background-image: url("abstract-1278044_1920.jpg");
-  background-size: cover;
-  margin: 20px;
+body {
+  margin: 0px;
+  background-color: #bedcfa;
 }
 
 body > * > * {            /*Inhalte in Kopf und Fuß & Navigation und Inhalt*/
-  margin: 10px;
-}
-
-body > * {                /*Kopf, Mittelteil, Fuß*/
   margin: 10px;
 }
 
@@ -27,50 +22,67 @@ body > * {                /*Kopf, Mittelteil, Fuß*/
   font-size: 18px;
   border: none;
   outline: none;
-  background: rgb(0, 133, 163);
-  background: rgba(0, 133, 163, 0.5);
   cursor: pointer;
   padding: 15px;
   border-radius: 4px;
 }
 
-header {                  /*Kopfzeile*/
+header {
   display: flex;
   align-items: center;
-  background: rgb(0, 133, 163);
-  background: rgba(0, 133, 163, 0.5);
-  border-radius: 5px;
+  border-left: 45px solid #98acf8;
+  border-right: 45px solid #98acf8;
+  border-top: 10px solid #98acf8;
+
+}
+
+header img {
+  width: 11vh;
+  height: auto;
+}
+
+header div * {
+  margin: 0px;
 }
 
 header > a {
-  margin-left: 30px;
-  margin-right: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-.Mittelteil {           /*Mittelteil*/
+.Mittelteil {
   display: flex;
   flex-wrap: wrap;
+  margin: 10px;
 }
 
-.Mittelteil > * {       /*Inhalt im Mittelteil (Navigation und Inhalt)*/
-  background: rgb(0, 133, 163);
-  background: rgba(0, 133, 163, 0.5);
-  border-radius: 5px;
-}
-
-nav {                 /*Navigationsbereich*/
+nav {
   flex: 1 1 5%;
+  margin: 35px 35px 0px 35px;
+}
+
+.Schloss {
+  display: flex;
+  justify-content: center;
+}
+
+.Schloss > div {
+  padding: 70px 130px 0 0;
+  border: 15px solid #da9ff9;
+  border-bottom: 0px;
+  border-radius: 70px 70px 0 0;
 }
 
 .Test {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-
+  align-items: flex-start;
 
   position: sticky;
-  top: 0;
+  top: 10vh;
+
+  border: 3px solid #da9ff9;
 }
 
 .Link {
@@ -88,11 +100,10 @@ nav a {
 	text-decoration: none;
   font-weight: bold;
 	text-align: center;
-	border: 1px solid black;
-	border-radius: 5px;
-	box-shadow: 0 5px 10px white inset;
-	color: white;
-	background-color: rgba(0, 133, 163, 0.5);
+  border-top: 3px solid;
+  border-bottom: 3px solid;
+  border-radius: 30px/5px;
+  font-size: 22px;
 }
 
 nav .untermenu {
@@ -118,26 +129,27 @@ nav a:hover, footer a:hover, #myBtn:hover {
   color: black;
 }
 
-.Inhalt {           /*Inhaltsbereich*/
-  flex: 1 1 71%;
+.Inhalt {
+  flex: 1 1 60%;
+  margin: 35px 35px 0px 35px;
 }
 
-.Inhalt > * {       /*Inhalt im Inhaltsbereich*/
+.Inhalt > * {
   margin: 15px;
 }
 
-footer {            /*Fußzeile*/
+footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background: rgb(0, 133, 163);
-    background: rgba(0, 133, 163, 0.5);
-    border-radius: 5px;
+    border-left: 45px solid #98acf8;
+    border-right: 45px solid #98acf8;
+    border-top: 10px solid #98acf8;
 }
 
 footer a {
-  color: #f2f2f2;
+  color: black;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 18px;
 }
