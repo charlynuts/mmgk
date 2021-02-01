@@ -4,3 +4,5 @@ finger-2819098:
 	https://pixabay.com/de/vectors/finger-fingerabdruck-menschliche-2819098/
 fingerprint-2750393_640:
 	https://pixabay.com/de/vectors/fingerabdruck-welt-karte-strudel-2750393/
+padlock-308589:
+	https://pixabay.com/de/vectors/vorh%C3%A4ngeschloss-sicherheit-sperre-308589/
