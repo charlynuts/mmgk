@@ -9,10 +9,11 @@ body {
   background-color: #bedcfa;
 }
 
-body > * > * {            /*Inhalte in Kopf und Fuß & Navigation und Inhalt*/
+body > * > * {
   margin: 10px;
 }
 
+/**Style des TOP Buttons*/
 #myBtn {
   display: none;
   position: fixed;
@@ -27,72 +28,63 @@ body > * > * {            /*Inhalte in Kopf und Fuß & Navigation und Inhalt*/
   border-radius: 4px;
 }
 
+/*--------HEADER--------*/
+
+/*Header als Flex-Container mit Rahmen*/
 header {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   border-left: 45px solid #98acf8;
   border-right: 45px solid #98acf8;
   border-top: 10px solid #98acf8;
+}
 
+#Ansprache {
+  flex: 1 1 10%;
+  text-align: right;
+  margin-right: 40px;
 }
 
 header img {
-  width: 11vh;
-  height: auto;
+  width: 70px;
 }
 
 header div * {
   margin: 0px;
 }
 
-header > a {
-  margin-left: 10px;
-  margin-right: 10px;
-}
+/*--------MITTELTEIL--------*/
 
+/*Mittelteil als Flex-container*/
 .Mittelteil {
   display: flex;
   flex-wrap: wrap;
   margin: 10px;
 }
 
+/*--------NAVIGATION--------*/
+
 nav {
   flex: 1 1 5%;
   margin: 35px 35px 0px 35px;
 }
 
-/*.Schloss {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  width: 100%;
-}
-
-.Schloss > div {
-  width: 100%;
-  height: 100px;
-  /*padding: 70px 130px 0 0;
-  /*border: 15px solid #808185;
-  border-bottom: 0px;
-  border-radius: 70px 70px 0 0;*//*
-  background-image: url("padlock-Bügel.svg");
-  background-repeat: no-repeat;
-  background-size: 100% 130px;
-}*/
-
-.Schloss {
-  height: 100px;
+/*Buegel mit img über div Buegel hinaus*/
+.Buegel {
+  height: 120px;
   display: flex;
   align-items: flex-start;
 }
 
-.Schloss img {
+.Buegel img {
   width: 100%;
   height: 140%;
   z-index: -1;
 }
 
-.Test {
+/*Schloss als Flex-container mit sticky und Backgroundimage*/
+.Schloss {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -101,19 +93,19 @@ nav {
   position: sticky;
   top: 10vh;
 
-  padding: 10px 10px 23px;
+  padding: 10px 10px 27px;
 
-  /*border: 3px solid #da9ff9;*/
   background-image: url("padlock-Körper.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  /*background-color: #decb7c;*/
 }
 
+/*Mindestbreite wird sichergestellt*/
 .Link {
   flex: 1 1 50%;
 }
 
+/*Style der Links*/
 .Link * {
 	margin: 10px;
   list-style: none;
@@ -131,17 +123,25 @@ nav a {
   font-size: 22px;
 }
 
+/*Untermenu hidden*/
 nav .untermenu {
 	visibility: hidden;
 	height: 0;
-	z-index: 1000;
 }
 
+/*Aktuelle Seite wird anders dargestellt*/
 nav a[aria-current] {
-	background-color: firebrick;
-	color: gold;
+	background: rgba(255, 255, 255, 0.5);
+  pointer-events: none;
 }
 
+/*Oberpunkt nicht klickbar*/
+/*NOCH NICHT AUSGEREIFT*/
+/*.Oberpunkt {
+  pointer-events: none;
+}*/
+
+/*Untermenu wird ausgeklappt*/
 .Link:hover .untermenu,
 .Link:active .untermenu,
 .Link:focus .untermenu {
@@ -150,9 +150,10 @@ nav a[aria-current] {
 }
 
 nav a:hover, footer a:hover, #myBtn:hover {
-  background: #f1f1f1;
-  color: black;
+  background: rgba(255, 255, 255, 0.7);
 }
+
+/*--------INHALT--------*/
 
 .Inhalt {
   flex: 1 1 50%;
@@ -162,6 +163,8 @@ nav a:hover, footer a:hover, #myBtn:hover {
 .Inhalt > * {
   margin: 15px;
 }
+
+/*--------FOOTER--------*/
 
 footer {
     display: flex;

@@ -5,46 +5,52 @@
     <title>Authentifizierung im WWW</title>
     <link rel="stylesheet" href="style_landing.css">
 	  <link rel="icon" type="image/svg+xml" href="finger-2819098.svg" sizes="any">
+    <script>
+      var Nachname, Passwort, elem;
+
+      function init()
+      {
+          Nachname = document.getElementsByName("Nachname")[0];
+          Passwort = document.getElementsByName("Passwort")[0];
+          Nachname.focus(); //Eingabecursor in Nachnamenfeld platzieren
+          elem = document.getElementById("Formular");
+          elem.addEventListener("submit", Bestätigen);
+      }
+
+      function Bestätigen()
+      {
+        if (Passwort.value == "13Punkte")
+        {
+          sessionStorage.setItem("name", Nachname.value);
+          window.open('Startseite.html');
+          window.close( );
+        }
+        else {
+          alert("Das Passwort ist leider falsch. Bitte versuchen Sie es erneut!");
+          window.open('landing_site.html');
+          window.close( );
+        }
+      }
+
+      window.addEventListener('DOMContentLoaded',init);
+
+    </script>
   </head>
   <body>
     <form id="Formular">
-      <h1>Online Authentifizierung</h1>
+      <h1>Online <br> Authentifizierung</h1>
 
-      <label for="nachname">Nachname</label>
-      <input type="text" name="nachname" required><br>
+      <div class="Eintrag">
+        <label for="Nachname">Nachname</label>
+        <input type="text" name="Nachname" required>
+      </div>
 
-      <label for="Passwort">Passwort</label>
-      <input type="password" name="Passwort" required><br>
+      <div class="Eintrag">
+        <label for="Passwort">Passwort</label>
+        <input type="password" name="Passwort" required>
+      </div>
 
       <button type="submit">anmelden</button>
     </form>
   </body>
-  <script>
-    var Nachname, Passwort, elem;
-
-    function init(){
-        Nachname = document.getElementsByName("Nachname")[0];
-        Passwort = document.getElementsByName("Passwort")[0];
-        Nachname.focus(); //Eingabecursor in Summandenfeld platzieren
-      }
-
-    elem = document.getElementById("Formular");
-    elem.addEventListener("submit", Bestätigen);
-
-    function Bestätigen()
-    {
-      if (Passwort.value == "13Punkte")
-      {
-        window.open('Startseite.html');
-        window.close( );
-      }
-      else {
-        alert("Das Passwort ist leider falsch. Bitte versuchen Sie es erneut!");
-        window.open('landing_site.html');
-        window.close( );
-      }
-    }
-
-    window.addEventListener('DOMContentLoaded',init);
-  </script>
 </html>
