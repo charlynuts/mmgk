@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Authentifizierung im WWW</title>
+    <link rel="stylesheet" href="Gesamt_Style.css">
+    <link rel="icon" type="image/svg+xml" href="finger-2819098.svg" sizes="any">
+    <script>
+      //Code teils aus folgender Quelle: https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
+      var mybutton;
+      function init()
+      {
+        mybutton = document.getElementById("myBtn");
+
+        var Nachname = sessionStorage.getItem("name");
+        if (Nachname==null)
+        {
+          document.getElementById('Ansprache').parentNode.removeChild(document.getElementById('Ansprache'));
+        }
+        else
+        {
+          document.getElementById('AnspracheText').innerHTML += Nachname;
+        }
+      }
+
+      // When the user scrolls down 250px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+      function scrollFunction() {
+        if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+
+      window.addEventListener('DOMContentLoaded',init);
+
+    </script>
+  </head>
+  <body>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <header>
+      <a href="Startseite.html"><img src="schloss.png" alt="Schloss"></a>
+      <div class="">
+        <h1>Authentifizierung</h1><br>
+        <h2>im World Wide Web</h2>
+      </div>
+      <div id="Ansprache">
+        <h1 id="AnspracheText">Willkommen, </h1>
+      </div>
+    </header>
+
+    <div class="Mittelteil">
+      <nav>
+        <div class="Buegel">  <!-- Schloss und das darunterliegende div sind für den Bügel des Schlosses -->
+          <img src="padlock-Bügel.svg" alt="">
+        </div>
+        <div class="Schloss">
+          <div class="Link">
+            <a href="Startseite.html">Startseite</a>
+          </div>
+          <div class="Link">
+            <a aria-current="page" href="Gründe.html">Gründe</a>
+          </div>
+          <div class="Link">
+            <a class="Oberpunkt" href="#">Methoden</a>
+            <ul class = "untermenu">
+              <li><a href="#">Passwort</a></li>
+              <li><a href="#">Zertifikat</a></li>
+              <li><a href="#">Token</a></li>
+            </ul>
+          </div>
+          <div class="Link">
+            <a class="Oberpunkt" href="#">2 Faktor</a>
+            <ul class = "untermenu">
+              <li><a href="#">Hallo1</a></li>
+              <li><a href="#">Test2</a></li>
+              <li><a href="#">Abend3</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="Inhalt">
+        <h1 >Gründe</h1>
+        <h2 id="Absatz1">1. Abschnitt</h2>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <h2>2. Abschnitt</h2>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
+        <br>
+
+        <h1 id="Absatz_k"> Absatz k</h1>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+        orem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+        orem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,orem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+        orem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, orem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,orem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+        </p>
+      </div>
+    </div>
+
+
+    <footer>
+      <a href="#about">Über Uns</a>
+      <a href="#clients">Kontakt</a>
+      <a href="#contact">Impressum</a>
+    </footer>
+
+  </body>
+</html>

@@ -1,0 +1,204 @@
+* {
+  box-sizing:border-box;
+  color: black;
+  font-family: sans-serif;
+}
+
+:focus{
+  outline: none;
+}
+
+body {
+  margin: 0px;
+  background-color: #bedcfa;
+}
+
+/**Style des TOP Buttons*/
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 18px;
+  right: 30px;
+  z-index: 99;
+  background: rgba(133, 230, 211, 0.7);
+  font-size: 18px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover{
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/*--------HEADER--------*/
+
+/*Header als Flex-Container mit Rahmen*/
+header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  border-left: 45px solid #7eafe0;
+  border-right: 45px solid #7eafe0;
+  border-top: 10px solid #7eafe0;
+}
+
+header > * {
+  margin: 10px;
+}
+
+#Ansprache {
+  flex: 1 1 10%;
+  text-align: right;
+  margin-right: 40px;
+}
+
+#AnspracheText {
+  color: #477a6f;
+}
+
+header img {
+  width: 70px;
+}
+
+header div * {
+  margin: 0px;
+}
+
+/*--------MITTELTEIL--------*/
+
+/*Mittelteil als Flex-container*/
+.Mittelteil {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 15px 10px 50px;
+}
+
+/*--------NAVIGATION--------*/
+
+nav {
+  flex: 1 1 5%;
+  margin: 35px 35px 0px 35px;
+}
+
+/*Buegel mit img über div Buegel hinaus*/
+.Buegel {
+  height: 120px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.Buegel img {
+  width: 100%;
+  height: 140%;
+  z-index: -1;
+}
+
+/*Schloss als Flex-container mit sticky und Backgroundimage*/
+.Schloss {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+
+  position: sticky;
+  top: 10vh;
+
+  padding: 10px 10px 27px;
+
+  background-image: url("padlock-Körper.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/*Mindestbreite wird sichergestellt*/
+.Link {
+  flex: 1 1 50%;
+}
+
+/*Style der Links*/
+.Link * {
+	margin: 10px;
+  list-style: none;
+}
+
+nav a {
+	display: block;
+	padding: 8px;
+	text-decoration: none;
+  font-weight: bold;
+	text-align: center;
+  border-top: 3px solid;
+  border-bottom: 3px solid;
+  border-radius: 30px/5px;
+  font-size: 22px;
+}
+
+/*Untermenu hidden*/
+nav .untermenu {
+	visibility: hidden;
+	height: 0;
+}
+
+/*Aktuelle Seite wird anders dargestellt*/
+nav a[aria-current] {
+	background: rgba(255, 255, 255, 0.4);
+}
+
+/*Oberpunkt nicht klickbar*/
+/*NOCH NICHT AUSGEREIFT*/
+/*.Oberpunkt {
+  pointer-events: none;
+}*/
+
+/*Untermenu wird ausgeklappt*/
+.Link:hover .untermenu,
+.Link:active .untermenu,
+.Link:focus .untermenu {
+	visibility: visible;
+	height: auto;
+}
+
+nav a:hover,
+nav a:active,
+nav a:focus{
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/*--------INHALT--------*/
+
+.Inhalt {
+  flex: 1 1 50%;
+  margin: 35px 35px 0px 35px;
+}
+
+.Inhalt > * {
+  margin: 15px;
+}
+
+/*--------FOOTER--------*/
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /*border-left: 45px solid #7eafe0;
+    border-right: 45px solid #7eafe0;
+    border-top: 10px solid #7eafe0;*/
+    background: #7eafe0;
+}
+
+footer a {
+  padding: 14px 16px;
+  margin: 10px 40px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+footer a:hover,
+footer a:active,
+footer a:focus{
+  background: rgba(255, 255, 255, 0.3);
+}

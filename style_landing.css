@@ -1,0 +1,45 @@
+* {
+  box-sizing:border-box;
+  color: black;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #bedcfa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*height: 85vh;*/
+  height: 90vh;
+}
+
+form {
+  text-align: center;
+  /*padding: 200px 90px 37px;*/
+  padding: 240px 110px 53px;
+  background-image: url("padlock-308589.svg");
+  background-repeat: no-repeat;
+
+}
+
+.Eintrag {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+div:first-child {
+  margin-top: 15px;
+}
+
+div ~ div {
+  margin-bottom: 15px;
+}
+
+.Eintrag * {
+  flex: 1 1 50%;
+  /*margin: 5px 13px;*/
+  margin: 5px 9px;
+}
