@@ -1,0 +1,7 @@
+https://www.ceilers-news.de/serendipity/351-Authentifizierung-Ein-Faktor-reicht-nicht-mehr.html
+https://www.itwissen.info/Authentifizierung-authentication.html
+https://en.wikipedia.org/wiki/Authentication
+https://docs.microsoft.com/de-de/azure/active-directory/develop/authentication-vs-authorization
+https://www.elektronik-kompendium.de/sites/net/1710241.htm
+https://de.wikiversity.org/wiki/Authentication_im_Web
+https://de.wikipedia.org/wiki/Authentifizierung

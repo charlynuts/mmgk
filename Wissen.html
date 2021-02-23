@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Authentifizierung im WWW</title>
+    <link rel="stylesheet" href="Gesamt_Style.css">
+    <link rel="icon" type="image/svg+xml" href="finger-2819098.svg" sizes="any">
+    <script src="Hauptseite.js"></script>
+    <noscript>
+      Du hast JavaScript Deaktiviert. Bitte Deaktiviere es für eine korrekte Darstellung!
+    </noscript>
+  </head>
+  <body>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <header>
+      <a href="Authentifizierung.html"><img src="schloss.png" alt="Schloss"></a>
+      <div class="">
+        <h1>Authentifizierung</h1><br>
+        <h2>im World Wide Web</h2>
+      </div>
+      <div id="Ansprache">
+        <h1 id="AnspracheText">Willkommen, </h1>
+      </div>
+    </header>
+
+    <div class="Mittelteil">
+      <nav>
+        <div class="Buegel">  <!-- Schloss und das darunterliegende div sind für den Bügel des Schlosses -->
+          <img src="padlock-Bügel.svg" alt="Bügel eines Schlosses">
+        </div>
+        <div class="Schloss">
+          <div class="Link">
+            <a href="Authentifizierung.html">Authentifizierung</a>
+          </div>
+          <div class="Link">
+            <a class="Oberpunkt" href="#">Methoden</a>
+            <ul class = "untermenu">
+              <li><a aria-current="page" class="Unterpunkt" href="Wissen.html">Wissen</a></li>
+              <li><a class="Unterpunkt" href="Besitz.html">Besitz</a></li>
+              <li><a class="Unterpunkt" href="Biometrie.html">Biometrie</a></li>
+              <!-- <li><a class="Unterpunkt" href="#">Token???</a></li> -->
+            </ul>
+          </div>
+          <div class="Link">
+            <a href="Sichere_Uebertragung.html">Sichere Übertragung</a>
+          </div>
+          <div class="Link">
+            <a href="2_Faktor_Authentifizierung.html">2 Faktor Authentifizierung</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="Inhalt">
+        <h1>Wissen</h1>
+        <p>
+          Authentifizierung über Wissen ist wohl die bekannteste Art und Weise der Authentifizierung.
+          Sie dürfte jedem Bekannt sein.
+        </p>
+        <h2>Beispiele</h2>
+        <p>
+          PIN
+          <ul>
+            <li>Bankschließfach</li>
+            <li>Zahlenschloss</li>
+            <li>SIM-Karten-PIN</li>
+          </ul>
+        </p>
+        <p>
+          Passwort
+          <ul>
+            <li>Online-Shop</li>
+            <li>E-Mail-Account</li>
+            <li>Online-Lernplattform</li>
+            <li>"Diese Webseite"</li>
+          </ul>
+        </p>
+        <p>
+          Sicherheitsfrage(n)
+          <ul>
+            <li>Passwort vergessen</li>
+            <li>Telefonhotline (Abgleich Geburtsdatum, Adresse, Name)</li>
+          </ul>
+        </p>
+        <h2>Vor- und Nachteile</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Vorteile</th>
+              <th>Nachteile</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>flexibel</td>
+              <td>vergessbar</td>
+            </tr>
+            <tr>
+              <td>leicht implementierbar</td>
+              <td>kopier- und weitergebbar</td>
+            </tr>
+            <tr>
+              <td>in Grenzen frei wählbar</td>
+              <td>Aussspäh bzw. erratbar</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>Beispiel: Passwort</h2>
+        <p>
+          Die Verwendung eines Passwortes ist simpel und unkompliziert, aber dennoch nicht frei von Risiken.
+          Da Passwörter meist selbst gewählt werden, hängt die Sicherheit von der Komplexität dieser ab.
+        </p>
+        <p>
+          Dies wird häufig als Sicherheitsgrad bezeichnet und ist beeinflussbar durch das Einbauen von Zahlen, Sonderzeichen, Groß- und Kleinschreibung und der Verwendung von Buchstabenverkettungen, die keine Bedeutung haben.
+          Beispiele von beliebten Passwörtern, wie „123456“, „000000“, „password“ oder „abc123“, bieten dementsprechend nur geringe Sicherheit, da sie nahezu gar nicht die eben genannten Faktoren beinhalten oder in gleicher Reihenfolge auf dem Tastaturlayout vorliegen.
+        </p>
+        <p>
+          Oft verwenden Nutzer dasselbe Passwort für mehrere Anwendungen.
+          Sollte also das eine Passwort in die falschen Hände geraten oder gehackt werden, so sind alle Anwendungen des Nutzers bedroht.
+          Daher wird empfohlen für jede Anwendung ein anderes Passwort zu nutzen, um die Sicherheit zu gewährleisten.
+          Praktisch ist die Verwendung von drei verschiedenen Passwörtern, da es einige Anwendungen gibt, die nur drei Eingabeversuche ermöglichen.
+          Somit kann man sorgenfrei alle drei Passwörter durchprobieren, ohne Gefahr zu laufen das Versuchslimit zu überschreiten.
+        </p>
+      </div>
+
+
+    </div>
+
+
+    <footer>
+      <a href="Ueber.html">Über Uns</a>
+      <a href="Kontakt.html">Kontakt</a>
+      <a href="Impressum.html">Impressum</a>
+    </footer>
+
+  </body>
+</html>

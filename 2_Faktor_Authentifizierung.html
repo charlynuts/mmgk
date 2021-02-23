@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Authentifizierung im WWW</title>
+    <link rel="stylesheet" href="Gesamt_Style.css">
+    <link rel="icon" type="image/svg+xml" href="finger-2819098.svg" sizes="any">
+    <script src="Hauptseite.js"></script>
+    <noscript>
+      Du hast JavaScript Deaktiviert. Bitte Deaktiviere es für eine korrekte Darstellung!
+    </noscript>
+  </head>
+  <body>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <header>
+      <a href="Authentifizierung.html"><img src="schloss.png" alt="Schloss"></a>
+      <div class="">
+        <h1>Authentifizierung</h1><br>
+        <h2>im World Wide Web</h2>
+      </div>
+      <div id="Ansprache">
+        <h1 id="AnspracheText">Willkommen, </h1>
+      </div>
+    </header>
+
+    <div class="Mittelteil">
+      <nav>
+        <div class="Buegel">  <!-- Schloss und das darunterliegende div sind für den Bügel des Schlosses -->
+          <img src="padlock-Bügel.svg" alt="Bügel eines Schlosses">
+        </div>
+        <div class="Schloss">
+          <div class="Link">
+            <a href="Authentifizierung.html">Authentifizierung</a>
+          </div>
+          <div class="Link">
+            <a class="Oberpunkt" href="#">Methoden</a>
+            <ul class = "untermenu">
+              <li><a class="Unterpunkt" href="Wissen.html">Wissen</a></li>
+              <li><a class="Unterpunkt" href="Besitz.html">Besitz</a></li>
+              <li><a class="Unterpunkt" href="Biometrie.html">Biometrie</a></li>
+              <!-- <li><a class="Unterpunkt" href="#">Token???</a></li> -->
+            </ul>
+          </div>
+          <div class="Link">
+            <a href="Sichere_Uebertragung.html">Sichere Übertragung</a>
+          </div>
+          <div class="Link">
+            <a aria-current="page" href="2_Faktor_Authentifizierung.html">2 Faktor Authentifizierung</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="Inhalt">
+        <h1>Kombination von Methoden</h1>
+        <p>
+          Durch Kombination verschiedener Methoden können Nachteile abgeschwächt und die Sicherheit erhöht werden.
+          Jedoch erhöht dies den Aufwand und die benötigte Zeit zur Authentifizierung.
+        </p>
+        <p>
+          Weit verbreitet ist die Kombination von 2 Methoden im Rahmen einer 2-Faktor-Authentifizierung, welche immer häufiger benutzt wird.
+          Dabei wird normalerweise die Methode Besitz mit der Methode Wissen verbunden.
+          Generell jedoch 2 verschiedene und voneinander unabhängige Methoden.
+        </p>
+        <p>
+          Häufig genutzt im World Wide Web wird als erster Faktor die Authentifizierung durch Nutzername (als Angabe der zu beweisenden Identität) und Passwort (Wissen).
+          Dazu ergänzend wird ein Code via SMS/Mail oder einer App genutzt (Besitz).
+          Die App gewinnt dabei immer mehr an Bedeutung.
+          So findet die 2-Faktor-Authentifizierung bei Google über eine App statt.
+        </p>
+        <p>
+          Gerade beim Online-Banking in der App mit modernen Smartphones kommt auch die Kombination von Besitz (App) und Biometrie (Fingerabdruck oder Gesichtserkennung) zum Einsatz.
+          Der Benutzer kann einfach mit seinem Finger in seinen Account gelangen.
+          Ein Passwort ist als Ausweichmöglichkeit jedoch jederzeit benutzbar.
+        </p>
+        <p>
+          Für sicherheitskritische Anwendungen wird die Zwei-Faktor-Authentifizierung sogar vom Bundesamt für Sicherheit in der Informationstechnik im IT-Grundschutz-Katalog empfohlen.
+          Ebenso empfehlen Stiftung Warentest und weitere Verbraucherschützer die Nutzung von zwei Faktoren für möglichst viele Anwendungen, da so die teilweise sehr schwachen Passwörter ein geringeres Risiko darstellen.
+        </p>
+        <p>
+          Ein Anwendungsbeispiel außerhalb des World Wide Webs wären normale Kreditkarten.
+          Ab einem bestimmten Geldbetrag reicht nicht nur der Besitz der Karte, dann muss man auch seine Pin (sein Wissen) eingeben.
+        </p>
+      </div>
+
+
+    </div>
+
+
+    <footer>
+      <a href="Ueber.html">Über Uns</a>
+      <a href="Kontakt.html">Kontakt</a>
+      <a href="Impressum.html">Impressum</a>
+    </footer>
+
+  </body>
+</html>

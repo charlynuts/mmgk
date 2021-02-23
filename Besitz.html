@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Authentifizierung im WWW</title>
+    <link rel="stylesheet" href="Gesamt_Style.css">
+    <link rel="icon" type="image/svg+xml" href="finger-2819098.svg" sizes="any">
+    <script src="Hauptseite.js"></script>
+    <noscript>
+      Du hast JavaScript Deaktiviert. Bitte Deaktiviere es für eine korrekte Darstellung!
+    </noscript>
+  </head>
+  <body>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <header>
+      <a href="Authentifizierung.html"><img src="schloss.png" alt="Schloss"></a>
+      <div class="">
+        <h1>Authentifizierung</h1><br>
+        <h2>im World Wide Web</h2>
+      </div>
+      <div id="Ansprache">
+        <h1 id="AnspracheText">Willkommen, </h1>
+      </div>
+    </header>
+
+    <div class="Mittelteil">
+      <nav>
+        <div class="Buegel">  <!-- Schloss und das darunterliegende div sind für den Bügel des Schlosses -->
+          <img src="padlock-Bügel.svg" alt="Bügel eines Schlosses">
+        </div>
+        <div class="Schloss">
+          <div class="Link">
+            <a href="Authentifizierung.html">Authentifizierung</a>
+          </div>
+          <div class="Link">
+            <a class="Oberpunkt" href="#">Methoden</a>
+            <ul class = "untermenu">
+              <li><a class="Unterpunkt" href="Wissen.html">Wissen</a></li>
+              <li><a aria-current="page" class="Unterpunkt" href="Besitz.html">Besitz</a></li>
+              <li><a class="Unterpunkt" href="Biometrie.html">Biometrie</a></li>
+              <!-- <li><a class="Unterpunkt" href="#">Token???</a></li> -->
+            </ul>
+          </div>
+          <div class="Link">
+            <a href="Sichere_Uebertragung.html">Sichere Übertragung</a>
+          </div>
+          <div class="Link">
+            <a href="2_Faktor_Authentifizierung.html">2 Faktor Authentifizierung</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="Inhalt">
+        <h1>Besitz</h1>
+        <p>Eher mehr aus dem Alltag als aus dem World Wide Web dürfte die Authentifizierung über Besitz bekannt sein.</p>
+        <h2>Beispiele</h2>
+        <ul>
+          <li>
+            Chipkarte
+            <ul>
+              <li>Personalausweis</li>
+              <li>Führerschein</li>
+              <li>Krankenkarte</li>
+              <li>Bankkarten</li>
+            </ul>
+          </li>
+          <li>
+            Magnetstreifenkarte
+            <ul>
+              <li>Bankkarte</li>
+              <li>Treuekarte</li>
+            </ul>
+          </li>
+          <li>
+            Schlüssel-Codes auf einer Festplatte
+            <ul>
+              <li>Kryptowährungen (Bitcoin)</li>
+            </ul>
+          </li>
+          <li>
+            Zertifikate
+          </li>
+        </ul>
+
+        <h2>Vor- und Nachteile</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Vorteile</th>
+              <th>Nachteile</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>kann sich selbst schützen und verändern</td>
+              <td>Besitz muss mit sich geführt werden</td>
+            </tr>
+            <tr>
+              <td>Wissentechnisch nicht vergessbar</td>
+              <td>kann verloren, beschädigt, oder gestohlen werden</td>
+            </tr>
+            <tr>
+              <td>Kann Benutzerindividuelle Daten speichern</td>
+              <td>Erzeugung, Verwaltung, und Ersatz ist mit Kosten verbunden</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Beispiel: Zertifikat</h2>
+        <p>
+          Ähnlich dem Passwort ist das Zertifikat.
+          Dieses gilt allgemein als sicherer, da der Nutzer nicht die Möglichkeit hat, ein schwaches Passwort zu wählen, das er sich merken müsste.
+        </p>
+        <p>
+          Innerhalb des Zertifikats wird ein Teil generiert, der einem Passwort entspricht und aus komplizierten Zeichenketten bestehen kann, die sich ein Nutzer nicht oder kaum merken könnte.
+          Das Zertifikat verwendet ein Schlüsselpaar, bestehend aus einem Public-Key und einem Private-Key.
+          Wie die Namen schon sagen, wird der Public-Key im Zertifikat öffentlich gemacht, während der Private-Key unter Verschluss gehalten wird.
+        </p>
+        <p>
+          Das Zertifikat muss dem Nutzer lediglich zukommen und auf seinem Gerät oder im verwendeten Browser gespeichert sein.
+        </p>
+        <p>
+          ??????????ßDiese Methode der Authentifizierung konnte sich nicht durchsetzen, da der Aufwand für die Betreiber der Seite/Anwendung, durch das Verwalten der Zertifikate, größer ist.
+        </p>
+      </div>
+
+
+    </div>
+
+
+    <footer>
+      <a href="Ueber.html">Über Uns</a>
+      <a href="Kontakt.html">Kontakt</a>
+      <a href="Impressum.html">Impressum</a>
+    </footer>
+
+  </body>
+</html>
