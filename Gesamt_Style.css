@@ -187,23 +187,19 @@ nav a:focus{
   color: #227edb;
 }
 
-ul {
+.Inhalt ul {
   margin: 10px;
   list-style: square outside;
 }
 
-ul ul {
+.Inhalt ul ul {
   list-style: disc;
   margin: 5px;
 }
 
-
-
-li {
+.Inhalt li {
   padding: 2px;
 }
-
-
 
 table {
   border-collapse: collapse;
@@ -223,6 +219,20 @@ th,
 td {
   padding: 5px 10px;
   border: 1px solid;
+}
+
+form {
+  border: 1px solid;
+  box-shadow: 0px 0px 5px black;
+  width: 18em;
+  padding: 15px;
+}
+
+label,
+span,
+output {
+  display: inline-block;
+  width: 8em;
 }
 
 /*--------FOOTER--------*/
