@@ -82,7 +82,7 @@ header div * {
 /*--------NAVIGATION--------*/
 
 nav {
-  flex: 1 1 5%;
+  flex: 1 1 4%;
   margin: 15px 35px 0px 35px;
 }
 
@@ -173,7 +173,7 @@ nav a:focus{
 /*--------INHALT--------*/
 
 .Inhalt {
-  flex: 1 1 50%;
+  flex: 1 1 55%;
   margin: 35px 35px 0px 35px;
   /* box-shadow: 0px 0px 10px black; */
   /* background-color: #bedcfa; */
@@ -202,7 +202,7 @@ nav a:focus{
   padding: 5px;
   padding-left: 10px;
   margin: 10px;
-  border-left: 2px solid;
+  border-left: 4px solid;
 }
 
 .Beispiele ul ul {
