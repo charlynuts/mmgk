@@ -10,8 +10,6 @@
 
 body {
   margin: 0px;
-  /* background: rgb(192,223,255); */
-  /* background: linear-gradient(135deg, rgba(192,223,255,1) 0%, rgba(190,220,250,1) 50%, rgba(162,208,255,1) 100%); */
   background-color: #bedcfa;
 }
 
@@ -82,7 +80,7 @@ header div * {
 /*--------NAVIGATION--------*/
 
 nav {
-  flex: 1 1 4%;
+  flex: 1 1 5%;
   margin: 15px 35px 0px 35px;
 }
 
@@ -111,7 +109,7 @@ nav {
 
   padding: 10px 10px 27px;
 
-  background-image: url("padlock-Körper.svg");
+  background-image: url("../Grafiken/padlock-Körper.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -150,12 +148,6 @@ nav a[aria-current] {
 	background: rgba(255, 255, 255, 0.4);
 }
 
-/*Oberpunkt nicht klickbar*/
-/*NOCH NICHT AUSGEREIFT*/
-/*.Oberpunkt {
-  pointer-events: none;
-}*/
-
 /*Untermenu wird ausgeklappt*/
 .Link:hover .untermenu,
 .Link:active .untermenu,
@@ -173,10 +165,8 @@ nav a:focus{
 /*--------INHALT--------*/
 
 .Inhalt {
-  flex: 1 1 55%;
+  flex: 1 1 50%;
   margin: 35px 35px 0px 35px;
-  /* box-shadow: 0px 0px 10px black; */
-  /* background-color: #bedcfa; */
 }
 
 .Inhalt > * {
@@ -185,7 +175,16 @@ nav a:focus{
 
 .Inhalt h1 {
   color: #227edb;
-  text
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.Inhalt h2 {
+  margin-top: 30px;
+}
+
+.Inhalt:first-child + p {
+
 }
 
 .Inhalt p {
@@ -202,7 +201,7 @@ nav a:focus{
   padding: 5px;
   padding-left: 10px;
   margin: 10px;
-  border-left: 4px solid;
+  border-left: 3px solid #7eafe0;
 }
 
 .Beispiele ul ul {
@@ -220,6 +219,10 @@ nav a:focus{
 .Methoden ul ul{
   list-style-type: none;
   padding-left: 15px;
+}
+
+.Inhalt ol {
+  line-height: 1.5em;
 }
 
 table {
@@ -244,17 +247,17 @@ td {
 }
 
 form {
-  border: 1px solid;
-  box-shadow: 0px 0px 5px black;
+  border: 1px solid #7eafe0;
+  box-shadow: 0px 0px 5px #7eafe0;
   width: 18em;
-  padding: 15px;
+  padding: 15px 15px 0px;
 }
 
 label,
 span,
 output {
   display: inline-block;
-  width: 8em;
+  width: 7em;
 }
 
 /*--------FOOTER--------*/
@@ -263,13 +266,10 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /*border-left: 45px solid #7eafe0;
-    border-right: 45px solid #7eafe0;
-    border-top: 10px solid #7eafe0;*/
     background: #7eafe0;
 }
 
-footer a {
+footer a, details{
   padding: 14px 16px;
   margin: 10px 20px;
   text-decoration: none;
@@ -283,6 +283,22 @@ footer a[aria-current] {
 
 footer a:hover,
 footer a:active,
-footer a:focus{
+footer a:focus,
+details:focus, details:active, details:hover
+{
   background: rgba(255, 255, 255, 0.3);
+}
+
+details summary{
+  cursor: pointer;
+  text-align: center;
+}
+
+details div {
+  border: 2px solid;
+  background-color: #bedcfa;
+}
+
+details p {
+  margin: 5px;
 }
