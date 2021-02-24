@@ -185,20 +185,41 @@ nav a:focus{
 
 .Inhalt h1 {
   color: #227edb;
+  text
 }
 
-.Inhalt ul {
+.Inhalt p {
+  line-height: 1.5em;
+}
+
+.Inhalt > div > ul {
   margin: 10px;
-  list-style: square outside;
+  padding: 0px;
+  list-style: none;
 }
 
-.Inhalt ul ul {
+.Inhalt > div > ul > li {
+  padding: 5px;
+  padding-left: 10px;
+  margin: 10px;
+  border-left: 2px solid;
+}
+
+.Beispiele ul ul {
   list-style: disc;
   margin: 5px;
+  margin-bottom: 10px;
 }
 
-.Inhalt li {
-  padding: 2px;
+.Inhalt ul ul li {
+  margin: 8px;
+  line-height: 1.5em;
+
+}
+
+.Methoden ul ul{
+  list-style-type: none;
+  padding-left: 15px;
 }
 
 table {
@@ -219,6 +240,7 @@ th,
 td {
   padding: 5px 10px;
   border: 1px solid;
+  line-height: 1.5em;
 }
 
 form {
