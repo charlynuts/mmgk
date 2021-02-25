@@ -13,6 +13,9 @@ function init()
   {
     document.getElementById('AnspracheText').innerHTML += Nachname;
   }
+
+  document.getElementById('Details').addEventListener('toggle',detailsAuf);
+
 }
 
 // When the user scrolls down 250px from the top of the document, show the button
@@ -29,6 +32,12 @@ function scrollFunction() {
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
+}
+
+function detailsAuf()
+{
+  document.body.scrollTop = document.body.clientHeight;
+  document.documentElement.scrollTop = document.body.clientHeight;
 }
 
 window.addEventListener('DOMContentLoaded',init);
