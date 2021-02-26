@@ -2,7 +2,7 @@
 <html lang="de" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Authentifizierung im WWW</title>
+    <title>Authentifizierung im Internet</title>
     <link rel="stylesheet" href="../CSS/Gesamt_Style.css">
     <link rel="icon" type="image/svg+xml" href="../Grafiken/finger-2819098.svg" sizes="any">
     <script src="../JS/Hauptseite.js"></script>
@@ -15,10 +15,10 @@
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
     <header>
-      <a href="Authentifizierung.html"><img src="../Grafiken/schloss.png" alt="Schloss"></a>
+      <a href="Authentifizierung.html"><img src="../Grafiken/schloss.png" alt="Schloss" role="none"></a>
       <div class="">
         <h1>Authentifizierung</h1><br>
-        <h2>im World Wide Web</h2>
+        <h2>im Internet</h2>
       </div>
       <div id="Ansprache">
         <h1 id="AnspracheText">Willkommen, </h1>
@@ -28,7 +28,7 @@
     <div class="Mittelteil">
       <nav>
         <div class="Buegel">  <!-- Schloss und das darunterliegende div sind für den Bügel des Schlosses -->
-          <img src="../Grafiken/padlock-Bügel.svg" alt="Bügel eines Schlosses">
+          <img src="../Grafiken/padlock-Bügel.svg" alt="Bügel eines Schlosses" role="none">
         </div>
         <div class="Schloss">
           <div class="Link">
@@ -54,7 +54,8 @@
 
       <div class="Inhalt">
         <h1>Biometrie / Körperliche Merkmale</h1>
-        <p>Die 3. Methode ist die Authentifizierung über Körperliche Merkmale, also Biometrie.</p>
+        <p>Die 3. Methode ist die Authentifizierung über körperliche Merkmale, also Biometrie.</p>
+        <p>"Ich bin Luca Mustermann und ich kann es beweisen, weil ich ein bestimmtes körperliches Merkmal habe."</p>
         <h2>Beispiele</h2>
         <div class="Beispiele"><ul>
           <li>
@@ -90,16 +91,16 @@
           </thead>
           <tbody>
             <tr>
-              <td>kann nicht verloren oder vergessen werden</td>
-              <td>kann sich mit der Zeit verändern. FallBack von nöten</td>
+              <td>Kann nicht verloren oder vergessen werden</td>
+              <td>Kann sich mit der Zeit verändern (Fallback von Nöten)</td>
             </tr>
             <tr>
-              <td>nicht weitergebbar und schwer stehlbar (4 Finger übrig)</td>
-              <td>Aufwändige Verwaltung und Erfassung</td>
+              <td>Nicht weitergebbar und schwer stehlbar (4 Finger übrig)</td>
+              <td>Aufwendige Verwaltung und Erfassung</td>
             </tr>
             <tr>
               <td>Relativ hohe Sicherheit</td>
-              <td>Überprüfung nur auf eine gewisse Wahrscheinlihkeit hin möglich</td>
+              <td>Überprüfung nur auf eine gewisse Wahrscheinlichkeit hin möglich</td>
             </tr>
             <tr>
               <td></td>
@@ -112,9 +113,60 @@
           </tbody>
         </table>
 
-        <h2>Beispiel: Fingerabdruck?</h2>
-        <p>INHALT</p>
+        <h2>Beispiel: Fingerabdruck</h2>
+        <p>
+          Der Fingerabdruck wird immer häufiger als Authentifizierungsmöglichkeit benutzt.
+          Vor allem in Smartphones ist mittlerweile meistens ein Fingerabdruckscanner verbaut.
+        </p>
+        <p>
+          Nachfolgend sollen 3 verschiedene Varianten eines Fingerabdruckscanners vorgestellt werden.
+          Diese werden bzw. wurden auch in Smartphones eingesetzt.
+        </p>
+        <h3>Optischer Fingerabruckscanner</h3>
+        <p>
+          Diese Technik ist relativ Alt.
+          Sie wurde im ersten Mobiltelefon mit Fingerabdruck-Scanner verbaut, dem Motorola Atrix.
+        </p>
+        <p>
+          Der optische Fingerabdruck-Scanner besteht aus einer Lichtquelle, einem Prisma und einem Sensor.
+          Liegt kein Finger auf der Oberfläche des Prismas, so dringt das Licht in das Prisma ein, wird auf der Innenseite totalreflektiert und trifft auf den Sensor.
+        </p>
+        <figure>
+          <img src="../Grafiken/fingerprint-Scanner.png" alt="Grafik zur Funktionsweise eines optischen Fingerabdrucksensors.">
+          <figcaption><a href="https://youtu.be/OmZEaS4biuk?t=76">Param: How fingerprint scanners work? Are under-screen touch IDs, new trend?</a></figcaption>
+        </figure>
+        <p>
+          Wenn ein Finger aufliegt, dann wird das Licht im Prisma nicht mehr an den Auflageflächen des Fingers reflektiert, sondern nur noch an dessen Rillen.
+          Also dort, wo nichts auf dem Prisma aufliegt.
+          Auf dem Sensor entstehen Schatten und das digitale Bild zeigt den Fingerabdruck.
+          Dieses Bild muss dann nur noch mit den abgespeicherten Bildern des Fingerabdrucks verglichen werden.
+        </p>
+        <p>
+          Ein Nachteil ist der klobige Aufbau mit dem Prisma, welches viel Platz braucht.
+          Außerdem wird nur ein 2-dimensionales Bild erschaffen, wodurch diese Variante recht anfällig für Fälschungen ist.
+        </p>
 
+        <h3>Kapazitiver Fingerabdruckscanner</h3>
+        <p>
+          Diese Methode benötigt eine Metallplatte.
+          Wird ein Finger auf diese gelegt, wird an den Graten (Erhöhungen der Haut) des Fingers Elektrizität geleitet.
+          An den Rillen jedoch nicht.
+          Dadurch entsteht, wie beim optischen Fingerabdruck-Scanner, ein 2-dimensionales Muster.
+        </p>
+        <p>
+          Dieser Fingerabruckscanner ist wohl aktuell noch der verbreitetste, wird jedoch zunehmend von der nächsten Variante verdrängt.
+        </p>
+
+        <h3>Ultraschall Fingerabruckscanner</h3>
+        <p>
+          Diese Technik wurde entwickelt, um einen sicheren, kompakten Fingerabdruck-Scanner im Display zu ermöglichen.
+          Wie schon der Name andeutet, werden Ultraschallsignale ausgesendet, welche das Glas des Displays durchqueren können.
+        </p>
+        <p>
+          Diese Signale werden dann an der Oberfläche des Fingers reflektiert und von einem Empfänger aufgenommen.
+          Der Empfänger kann Graten und Rillen identifizieren und erschafft so ein 3-dimensionales Bild des Fingerabdrucks.
+          Allein das 3-D Bild macht diese Technik deutlich sicherer.
+        </p>
 
       </div>
 

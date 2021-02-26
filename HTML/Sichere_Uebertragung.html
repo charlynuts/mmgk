@@ -2,7 +2,7 @@
 <html lang="de" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Authentifizierung im WWW</title>
+    <title>Authentifizierung im Internet</title>
     <link rel="stylesheet" href="../CSS/Gesamt_Style.css">
     <link rel="icon" type="image/svg+xml" href="../Grafiken/finger-2819098.svg" sizes="any">
     <script src="../JS/Hauptseite.js"></script>
@@ -16,10 +16,10 @@
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
     <header>
-      <a href="Authentifizierung.html"><img src="../Grafiken/schloss.png" alt="Schloss"></a>
+      <a href="Authentifizierung.html"><img src="../Grafiken/schloss.png" alt="Schloss" role="none"></a>
       <div class="">
         <h1>Authentifizierung</h1><br>
-        <h2>im World Wide Web</h2>
+        <h2>im Internet</h2>
       </div>
       <div id="Ansprache">
         <h1 id="AnspracheText">Willkommen, </h1>
@@ -29,7 +29,7 @@
     <div class="Mittelteil">
       <nav>
         <div class="Buegel">  <!-- Schloss und das darunterliegende div sind für den Bügel des Schlosses -->
-          <img src="../Grafiken/padlock-Bügel.svg" alt="Bügel eines Schlosses">
+          <img src="../Grafiken/padlock-Bügel.svg" alt="Bügel eines Schlosses" role="none">
         </div>
         <div class="Schloss">
           <div class="Link">
@@ -61,24 +61,24 @@
           Dies ist natürlich nicht gut, kann jedoch nicht zu 100% unterbunden werden.
         </p>
         <p>
-          Ein Weg diese Gefahr zu umgehen, ist zum Beispiel das mTAN Verfahren.
+          Ein Weg, diese Gefahr zu umgehen, ist zum Beispiel das mTAN Verfahren.
           Ein Code wird per SMS verschickt, welcher im Online-Banking eingegeben werden muss.
           Dies ist nichts anderes als eine 2-Faktor-Authentifizierung.
         </p>
-        <h2>???</h2>
         <p>
           Um diese Gefahr zu verringern gibt es Verfahren, bei denen man lediglich einen Beweis versendet.
           Dieser stellt sicher, dass man die Authentifizierungsdaten definitiv besitzt.
           Die Authentifizierungsdaten an sich werden also nicht übermittelt.
           Derjenige, der jemanden authentifiziert, kann jedoch nur zu einer gewissen Wahrscheinlichkeit sicher sein, dass die Identität wahr ist.
         </p>
+        <h2>Beispiel</h2>
         <p>
           Ein frei skizziertes Beispiel: <br>
           Ich authentifiziere mich mit Wissen.
           Jedoch nicht mit einem Passwort oder einer PIN, sondern mit dem Wissen des Aufbaus einer Zahl (einer PIN).
         </p>
         <p>
-          Der Server und Ich wissen, dass meine PIN (Zahl)
+          Der Server und ich wissen, dass meine PIN (Zahl)
         </p>
         <ol>
           <li>Positiv ist,</li>
@@ -90,25 +90,26 @@
           <li>Eine Quersumme von 27 besitzt.</li>
         </ol>
         <p>
-          Wenn Ich jetzt die PIN 47970 absende, habe ich mich erfolgreich authentifiziert.
+          Wenn ich jetzt die PIN 47970 absende, habe ich mich erfolgreich authentifiziert.
           Bei der PIN 76245 würde ich abgewiesen werden.
         </p>
         <p>
-          In Wirklichkeit ist das ganze natürlich um einiges schwieriger und man selbst als Benutzer wird nicht versuchen müssen solch eine Zahl zu finden.
+          In Wirklichkeit ist das Ganze natürlich um einiges schwieriger und man selbst als Benutzer wird nicht versuchen müssen solch eine PIN zu finden.
           Der Grundgedanke wird jedoch gut verdeutlicht.
-          Nach einer erfolgreichen Zahl wird eigenständig von beiden Seiten die Regel "Darf nicht die bereits eingegebene Zahl sein" hinzugefügt.
+          Nach einer erfolgreichen PIN wird eigenständig von beiden Seiten die Regel "Darf nicht die bereits eingegebene PIN sein" hinzugefügt.
         </p>
-        <h3>Probiere Selber Zahlen aus!</h3>
+        <!-- <h3>Probiere Selber Zahlen aus!</h3> -->
         <form id="Formular">
+          <legend>Probiere selber PINs aus!</legend>
           <label for="Pin">PIN</label>
           <input type="number" min="10000" max="99999" id="Pin" step="1" required>
           <p><span>Ausgabe:</span><output id="Antwort" for="Pin">keine Eingabe</output></p>
         </form>
         <p>
-          Das die Pin immer positiv, ganzzahlig, und 5 Stellig ist, könnte ein Angreifer leicht herausfinden.
+          Das die PIN immer positiv, ganzzahlig, und 5-Stellig ist, könnte ein Angreifer leicht herausfinden.
           Die anderen Eigenschaften schon Schwieriger.
-          Zwar gibt es 58 Zahlen die die obigen Eigenschaften erfüllen, jedoch liegt die Wahrscheinlichkeit zufällig eine dieser Zahlen (bei Kenntnis der 3 ersten Eigenschaften) zu erraten bei ca. 0,065%.
-          Bei Eingabe einer richtigen Pin ist es also Wahrscheinlich, dass man wirklich die Person ist, die das Wissen über die Eigenschaften besitzt.
+          Zwar gibt es 58 PINs die die Eigenschaften erfüllen, jedoch liegt die Wahrscheinlichkeit, zufällig eine dieser (bei Kenntnis der 3 ersten Eigenschaften) zu erraten, bei ca. 0,065%.
+          Bei Eingabe einer richtigen PIN ist es also wahrscheinlich, dass man wirklich die Person ist, die das Wissen über die Eigenschaften besitzt.
         </p>
       </div>
 

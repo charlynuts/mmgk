@@ -2,7 +2,7 @@
 <html lang="de" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Authentifizierung im WWW</title>
+    <title>Authentifizierung im Internet</title>
     <link rel="stylesheet" href="../CSS/Gesamt_Style.css">
     <link rel="icon" type="image/svg+xml" href="../Grafiken/finger-2819098.svg" sizes="any">
     <script src="../JS/Hauptseite.js"></script>
@@ -15,10 +15,10 @@
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
     <header>
-      <a href="Authentifizierung.html"><img src="../Grafiken/schloss.png" alt="Schloss"></a>
+      <a href="Authentifizierung.html"><img src="../Grafiken/schloss.png" alt="Schloss" role="none"></a>
       <div class="">
         <h1>Authentifizierung</h1><br>
-        <h2>im World Wide Web</h2>
+        <h2>im Internet</h2>
       </div>
       <div id="Ansprache">
         <h1 id="AnspracheText">Willkommen, </h1>
@@ -28,7 +28,7 @@
     <div class="Mittelteil">
       <nav>
         <div class="Buegel">  <!-- Schloss und das darunterliegende div sind für den Bügel des Schlosses -->
-          <img src="../Grafiken/padlock-Bügel.svg" alt="Bügel eines Schlosses">
+          <img src="../Grafiken/padlock-Bügel.svg" alt="Bügel eines Schlosses" role="none">
         </div>
         <div class="Schloss">
           <div class="Link">
@@ -54,7 +54,8 @@
 
       <div class="Inhalt">
         <h1>Besitz</h1>
-        <p>Eher mehr aus dem Alltag als aus dem World Wide Web dürfte die Authentifizierung über Besitz bekannt sein.</p>
+        <p>Eher mehr aus dem Alltag als aus dem Internet dürfte die Authentifizierung über Besitz bekannt sein.</p>
+        <p>"Ich bin Elisabeth Mustermann und ich kann es beweisen, weil ich etwas besitze."</p>
         <h2>Beispiele</h2>
         <div class="Beispiele"><ul>
           <li>
@@ -102,7 +103,7 @@
               <td>kann verloren, beschädigt, oder gestohlen werden</td>
             </tr>
             <tr>
-              <td>Kann Benutzerindividuelle Daten speichern</td>
+              <td>Kann benutzerindividuelle Daten speichern</td>
               <td>Erzeugung, Verwaltung, und Ersatz ist mit Kosten verbunden</td>
             </tr>
           </tbody>
@@ -112,14 +113,43 @@
         <p>
           Ähnlich dem Passwort ist das Zertifikat.
           Dieses gilt allgemein als sicherer, da der Nutzer nicht die Möglichkeit hat, ein schwaches Passwort zu wählen, das er sich merken müsste.
+          Das Zertifikat kann also lange komplizierte Passwörter nutzen, die sich ein Mensch kaum merken könnte.
         </p>
         <p>
-          ????????Innerhalb des Zertifikats wird ein Teil generiert, der einem Passwort entspricht und aus komplizierten Zeichenketten bestehen kann, die sich ein Nutzer nicht oder kaum merken könnte.
-          Das Zertifikat verwendet ein Schlüsselpaar, bestehend aus einem Public-Key und einem Private-Key.
-          Wie die Namen schon sagen, wird der Public-Key im Zertifikat öffentlich gemacht, während der Private-Key unter Verschluss gehalten wird.
+          Die Zertifikate sind außerdem sehr nutzerfreundlich, da hier kaum Aufwand für den Nutzer anfällt.
+          Die gesamte Arbeit liegt bei dem Provider, welcher sämtliche Zertifikate verwalten muss.
+          Das Zertifikat muss dem Nutzer oder dem Gerät von dem Provider gegeben werden, für dessen Dienst es den Nutzer oder das Gerät authentifizieren soll.
         </p>
         <p>
-          Das Zertifikat muss dem Nutzer lediglich zukommen und auf seinem Gerät oder im verwendeten Browser gespeichert sein.
+          Das Zertifikat wird im Explorer oder im Browser gespeichert.
+          Will der Nutzer nun auf den entsprechenden Dienst zugreifen, muss er dafür das passende Zertifikat vorlegen.
+          Das Zertifikat wird überprüft und authentifiziert den Nutzer für den Dienst.
+        </p>
+        <p>
+          Ein Zertifikat besteht unter anderem aus:
+        </p>
+        <ul>
+          <li>Versions- und Seriennummer</li>
+          <li>den für die Erstellung verwendeten Algorithem</li>
+          <li>Name des Ausstellers und Inhabers</li>
+          <li>Gültigkeitsdauer</li>
+          <li>Verwendungszweck</li>
+          <li>der digitalen Signatur der Zertifizierungsstelle</li>
+        </ul>
+        <p>
+          Die Zertifizierungsstellen geben nach Prüfungen beantrage Zertifikate aus.
+          Ähnlich wie ein Staat Personalausweise ausgibt.
+          Sie unterstehen besonderen gesetzlichen Regelungen.
+        </p>
+        <p>
+          Ein bekanntes Beispiel in Deutschland bietet die Steuerverwaltungs-Software ELSTER.
+          Ein bundesweites Projekt für die Abwicklung von Steuererklärungen und Steueranmeldungen.
+          Hier erhält der Nutzer während der Registrierung ein Zertifikat in Form einer Datei, die im Geräteexplorer gespeichert wird.
+          Bei jedem Log-in muss der Nutzer diese Datei vorweisen, um auf die Software zugreifen zu können.
+        </p>
+        <p>
+          Zertifikate werden auch benutzt, damit Webseiten sich authentifizieren, um das HTTPS-Protokoll zur Verschlüsselung zu benutzen.
+          Oder aber zur Signierung und Verschlüsselung von E-Mails.
         </p>
       </div>
 
