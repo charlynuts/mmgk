@@ -18,7 +18,7 @@ function Quersumme (Zahl)
 }
 
 function ueberpruefe() {
-  if ( Pin.valueAsNumber % 3 == 0 && Pin.valueAsNumber % 5 == 0 && Pin.valueAsNumber % 13 == 0 && Quersumme(Pin.valueAsNumber)==27)
+  if ( Pin.valueAsNumber > 9999 && Pin.valueAsNumber < 100000 && Pin.valueAsNumber % 3 == 0 && Pin.valueAsNumber % 5 == 0 && Pin.valueAsNumber % 13 == 0 && Quersumme(Pin.valueAsNumber)==27)
   {
     document.getElementById('Antwort').value = "Richtig";
   }
