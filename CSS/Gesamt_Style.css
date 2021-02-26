@@ -56,7 +56,7 @@ header > * {
 }
 
 #AnspracheText {
-  color: #227edb;
+  color: #064ca5;
 }
 
 header img {
@@ -178,17 +178,53 @@ nav a:focus{
 }
 
 .Inhalt h1 {
-  color: #227edb;
+  color: #064ca5;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
+.Inhalt h1 ~ h1 {
+  margin-top: 60px;
+}
+
 .Inhalt h2 {
+  margin-top: 45px;
+}
+
+.Inhalt h3 {
   margin-top: 30px;
 }
 
 .Inhalt p {
   line-height: 1.5em;
+}
+
+.Inhalt figure {
+  width: 95%;
+  max-width: 500px;
+  float: left;
+  margin: 15px 25px 15px 15px;
+  background: #e8e8e8;
+}
+
+.Inhalt figure img {
+  width: 100%;
+}
+
+.Inhalt figure figcaption {
+  font-size: 12px;
+  text-align: center;
+}
+
+.Inhalt a {
+  text-decoration: none;
+  color: #064ca5;
+  font-weight: bold;
+}
+
+.Inhalt a:hover,
+.Inhalt a:focus {
+  border-bottom: 2px solid;
 }
 
 .Inhalt > div > ul {
@@ -223,6 +259,10 @@ nav a:focus{
 
 .Inhalt ol {
   line-height: 1.5em;
+}
+
+.Inhalt > ul > li {
+  line-height: 1.25em;
 }
 
 table {
@@ -260,6 +300,12 @@ span,
 output {
   display: inline-block;
   width: 7em;
+}
+
+legend {
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 /*--------FOOTER--------*/
@@ -316,6 +362,12 @@ details p {
   margin: 5px;
 }
 
+/* Chrome */
 details summary::-webkit-details-marker {
   display:none;
+}
+
+/* Firefox */
+details summary {
+  list-style-type: none;
 }
